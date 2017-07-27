@@ -20,8 +20,8 @@ let style = StyleSheet.create({
     flex: 1,
     height: 40,
     borderWidth: 1,
-    borderColor: '#aaa',
-    alignItems: 'center',
+    borderColor: 'transparent',
+    alignItems: 'flex-start',
     justifyContent: 'center'
   },
   dateText: {
