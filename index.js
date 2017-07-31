@@ -51,11 +51,13 @@ class DatePicker extends Component {
   }
 
   componentWillMount() {
-    // ignore the warning of Failed propType for date of DatePickerIOS, will remove after being fixed by official
-    if (!console.ignoredYellowBox) {
-      console.ignoredYellowBox = [];
+    if (__DEV__) {
+      // ignore the warning of Failed propType for date of DatePickerIOS, will remove after being fixed by official
+      if (!console.ignoredYellowBox) {
+        console.ignoredYellowBox = [];
+      }
+      console.ignoredYellowBox.push('Warning: Failed propType');
     }
-    console.ignoredYellowBox.push('Warning: Failed propType');
   }
 
   componentWillReceiveProps(nextProps) {
